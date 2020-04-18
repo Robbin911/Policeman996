@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  android:background="@color/colorWhite"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <LinearLayout
+    android:id="@+id/clock_layout"
+    android:layout_width="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextClock
+      android:id="@+id/tv_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:format24Hour ="HH:mm"
+      android:format12Hour="hh:mm"
+      android:textColor="@color/colorPrimary"
+      android:gravity="left"
+      android:textSize="30sp" />
+
+    <TextClock
+      android:id="@+id/tv_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:format24Hour ="MM/dd EEEE"
+      android:format12Hour ="MM/dd EEEE"
+      android:textColor="@color/colorPrimary"
+      android:gravity="left"
+      android:textSize="20sp" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_below="@+id/clock_layout"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+      android:layout_marginLeft="30dp"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/company_icon"
+      android:layout_width="24dp"
+      android:layout_height="24dp"/>
+
+    <TextView
+      android:id="@+id/company_name"
+      android:textSize="20sp"
+      android:layout_gravity="center_vertical"
+      android:gravity="center_vertical"
+      android:layout_marginLeft="5dp"
+      android:text="Company"
+      android:textColor="@color/colorPrimary"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+
+    <ImageView
+      android:id="@+id/edit"
+      android:layout_marginLeft="5dp"
+      android:layout_gravity="center_vertical"
+      android:src="@drawable/edit"
+      android:layout_width="18dp"
+      android:layout_height="18dp"/>
+  </LinearLayout>
+
+  <RelativeLayout
+    android:layout_below="@+id/clock_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.policeman996.view.RefreshLayout
+      android:layout_centerInParent="true"
+      android:id="@+id/check_refresh_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+  </RelativeLayout>
+
+  <LinearLayout
+    android:id="@+id/check_layout"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="40dp"
+    android:orientation="horizontal"
+    android:layout_below="@+id/clock_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+      android:layout_weight="20"
+      android:layout_width="0dp"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.sackcentury.shinebuttonlib.ShineButton
+          android:layout_gravity="center"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:id="@+id/on_work_btn"
+          app:allow_random_color="false"
+          app:btn_fill_color="@color/colorPrimary"
+          app:siShape="@drawable/check_unselected"
+          app:big_shine_color="@color/colorPrimary"
+          app:click_animation_duration="200"
+          app:shine_animation_duration="2000"
+          app:shine_turn_angle="10"
+          app:small_shine_offset_angle="20"
+          app:small_shine_color="@color/colorPrimary"
+          app:shine_count="10"/>
+
+        <TextView
+          android:gravity="center_horizontal"
+          android:layout_below="@+id/on_work_btn"
+          android:layout_marginTop="20dp"
+          android:text="On Work"
+          android:textColor="@color/colorText1"
+          android:textSize="20sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+        <TextView
+          android:id="@+id/on_work_time"
+          android:visibility="gone"
+          android:gravity="center_horizontal"
+          android:layout_gravity="center"
+          android:layout_marginTop="5dp"
+          android:text="18：00"
+          android:textColor="@color/colorPrimary"
+          android:textSize="20sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+      </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_weight="1"
+    android:layout_width="0dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/round_bg_gray"
+      android:layout_centerInParent="true"
+      android:layout_width="5dp"
+      android:layout_height="match_parent"/>
+  </RelativeLayout>
+
+    <RelativeLayout
+    android:layout_weight="20"
+    android:layout_width="0dp"
+    android:layout_height="match_parent">
+
+      <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.sackcentury.shinebuttonlib.ShineButton
+          android:layout_gravity="center"
+          android:layout_width="60dp"
+          android:layout_height="60dp"
+          android:id="@+id/off_work_btn"
+          app:allow_random_color="false"
+          app:btn_fill_color="@color/colorPrimary"
+          app:siShape="@drawable/off_work"
+          app:big_shine_color="@color/colorPrimary"
+          app:click_animation_duration="200"
+          app:shine_animation_duration="2000"
+          app:shine_turn_angle="10"
+          app:small_shine_offset_angle="20"
+          app:small_shine_color="@color/colorPrimary"
+          app:shine_count="10"/>
+
+        <TextView
+          android:gravity="center_horizontal"
+          android:layout_marginTop="20dp"
+          android:text="Off Work"
+          android:textColor="@color/colorText1"
+          android:textSize="20sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+
+        <TextView
+          android:id="@+id/off_work_time"
+          android:visibility="gone"
+          android:gravity="center_horizontal"
+          android:layout_gravity="center"
+          android:layout_marginTop="5dp"
+          android:text=""
+          android:textColor="@color/colorPrimary"
+          android:textSize="20sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      </LinearLayout>
+
+  </RelativeLayout>
+
+  </LinearLayout>
+
+
+</RelativeLayout>

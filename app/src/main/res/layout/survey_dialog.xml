@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/survey_layout"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="60dp"
+  android:layout_marginBottom="60dp"
+  android:layout_marginLeft="24dp"
+  android:layout_marginRight="24dp"
+  android:background="@drawable/round_bg_large"
+  android:clipChildren="false"
+  android:clipToPadding="false"
+  android:focusable="true"
+  android:orientation="vertical">
+
+  <TextView
+    android:id="@+id/survey_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:text="Monthly Welfare Survey"
+    android:textColor="@color/colorWhite"
+    android:textSize="20sp" />
+
+  <TextView
+    android:id="@+id/hint"
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="36dp"
+    android:layout_marginRight="36dp"
+
+    android:textColor="@color/colorWhite"
+    android:layout_below="@+id/survey_title"
+    android:layout_centerHorizontal="true"
+
+    android:text="Please input your score of work welfare satisfaction"
+    android:textSize="16sp" />
+
+
+  <com.rengwuxian.materialedittext.MaterialEditText
+    android:id="@+id/score_edit"
+    android:layout_below="@id/hint"
+    android:layout_width="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginLeft="24dp"
+    app:met_floatingLabel="highlight"
+    android:hint="Input Score"
+    app:met_floatingLabelText="Score"
+    app:met_floatingLabelTextColor="@color/colorWhite"
+    app:met_underlineColor="@color/colorWhite"
+    android:maxLines="1"
+    android:maxLength="2"
+    android:singleLine="true"
+    android:textSize="30sp"
+    android:inputType="number"
+    android:digits="0123456789"
+    app:met_baseColor="@color/colorWhite"
+    app:met_primaryColor="@color/colorWhite"/>
+
+
+
+  <androidx.cardview.widget.CardView
+    android:layout_below="@id/score_edit"
+    android:layout_marginTop="20dp"
+    android:id="@+id/btn_submit"
+    android:layout_marginRight="36dp"
+    android:layout_marginLeft="36dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <TextView
+      android:text="SUBMIT"
+      android:layout_marginTop="5dp"
+      android:layout_marginBottom="5dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="10dp"
+
+      android:textSize="18sp"
+      android:textColor="@color/colorPrimary"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"/>
+
+  </androidx.cardview.widget.CardView>
+
+  <ImageView
+    android:id="@+id/close_btn"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="10dp"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/btn_submit"
+    android:src="@drawable/fork"
+    android:layout_width="24dp"
+    android:layout_height="24dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="60dp"
+  android:orientation="horizontal">
+
+  <RelativeLayout
+    android:id="@+id/tab_check"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+    <RelativeLayout
+      android:layout_centerInParent="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/check_unselected"/>
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_check"
+        android:textSize="13sp"
+        android:text="Daily Check"/>
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:id="@+id/tab_company"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+    <RelativeLayout
+      android:layout_centerInParent="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+      <ImageView
+        android:id="@+id/iv_company"
+        android:layout_centerHorizontal="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/company_unselected"/>
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/iv_company"
+        android:textSize="12sp"
+        android:text="Company"/>
+    </RelativeLayout>
+  </RelativeLayout>
+
+
+</LinearLayout>

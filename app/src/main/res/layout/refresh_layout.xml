@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <LinearLayout
+    android:id="@+id/refresh_layout"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+      android:layout_gravity="center"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:id="@+id/refresh_icon"
+      app:allow_random_color="false"
+      app:btn_fill_color="@color/colorPrimary"
+      app:siShape="@drawable/refresh"
+      app:big_shine_color="@color/colorPrimary"
+      app:click_animation_duration="100"
+      app:shine_animation_duration="2000"
+      app:shine_turn_angle="10"
+      app:small_shine_offset_angle="20"
+      app:small_shine_color="@color/colorPrimary"
+      app:shine_count="5"/>
+
+    <TextView
+      android:layout_gravity="center"
+      android:text="Network Error"
+      android:layout_marginTop="20dp"
+      android:textSize="20sp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+    <TextView
+      android:layout_gravity="center"
+      android:text="Please Retry"
+      android:textSize="15sp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+  </LinearLayout>
+</LinearLayout>

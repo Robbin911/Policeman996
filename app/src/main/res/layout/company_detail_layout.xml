@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <RelativeLayout
+    android:id="@+id/detail_top_bar"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="54dp">
+
+    <ImageView
+      android:id="@+id/back_btn"
+      android:layout_marginLeft="6dp"
+      android:layout_centerVertical="true"
+      android:src="@drawable/back"
+      android:layout_width="36dp"
+      android:layout_height="36dp"/>
+
+    <TextView
+      android:id="@+id/company_name_title"
+      android:layout_toRightOf="@+id/back_btn"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="42dp"
+      android:gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="36dp"
+      android:textColor="@color/colorWhite"
+      android:textSize="18sp"
+      android:singleLine="true"
+      android:ellipsize="end"/>
+
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:layout_below="@+id/detail_top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.example.policeman996.view.RefreshLayout
+      android:id="@+id/company_detail_refresh"
+      android:layout_centerInParent="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+      android:id="@+id/content_layout"
+      android:layout_centerVertical="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/company_rate"
+        android:layout_centerHorizontal="true"
+        android:text="99"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+      <TextView
+        android:id="@+id/eva_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/company_rate"
+        android:text="Total Evaluation"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+      <LinearLayout
+        android:id="@+id/work_time_layout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_below="@id/eva_text"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+          android:layout_marginLeft="5dp"
+          android:text="Average Work Time:"
+          android:layout_gravity="center_vertical"
+          android:textColor="@color/colorPrimary"
+          android:textSize="16sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+        <LinearLayout
+          android:layout_marginLeft="10dp"
+
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <androidx.cardview.widget.CardView
+            android:id="@+id/btn_week"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <TextView
+              android:text="Last Week"
+              android:layout_marginLeft="6dp"
+              android:layout_marginRight="6dp"
+              android:layout_marginTop="3dp"
+              android:layout_marginBottom="3dp"
+              android:layout_width="wrap_content"
+              android:textColor="@color/white"
+              android:textSize="12sp"
+              android:gravity="center"
+              android:layout_height="match_parent"
+              android:layout_gravity="center" />
+
+          </androidx.cardview.widget.CardView>
+
+
+          <androidx.cardview.widget.CardView
+            android:id="@+id/btn_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            app:cardBackgroundColor="@color/colorGray"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp">
+
+            <TextView
+              android:text="Last Month"
+              android:layout_marginLeft="6dp"
+              android:layout_marginRight="6dp"
+              android:layout_marginTop="3dp"
+              android:layout_marginBottom="3dp"
+              android:layout_width="wrap_content"
+              android:textColor="@color/white"
+              android:textSize="12sp"
+              android:gravity="center"
+              android:layout_height="match_parent"
+              android:layout_gravity="center" />
+
+          </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/work_time_detail"
+        android:layout_below="@id/work_time_layout"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+          android:layout_weight="20"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+              android:layout_gravity="center"
+              android:src="@drawable/check_selected"
+              android:layout_width="60dp"
+              android:layout_height="60dp"/>
+            <TextView
+              android:id="@+id/on_work_time"
+              android:gravity="center_horizontal"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="10dp"
+              android:text="09:00"
+              android:textColor="@color/colorPrimary"
+              android:textSize="20sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+
+            <TextView
+              android:gravity="center_horizontal"
+              android:layout_gravity="center_horizontal"
+              android:text="Start Work Time"
+              android:textColor="@color/colorText1"
+              android:textSize="16sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+          </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="match_parent">
+
+          <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_bg_gray"
+            android:layout_centerInParent="true"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+          android:layout_weight="20"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+              android:layout_gravity="center"
+              android:src="@drawable/off_work_blue"
+              android:layout_width="60dp"
+              android:layout_height="60dp"/>
+            <TextView
+              android:id="@+id/off_work_time"
+              android:gravity="center_horizontal"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="10dp"
+              android:text="09:00"
+              android:textColor="@color/colorPrimary"
+              android:textSize="20sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+
+            <TextView
+              android:gravity="center_horizontal"
+              android:layout_gravity="center_horizontal"
+              android:text="Off Work Time"
+              android:textColor="@color/colorText1"
+              android:textSize="16sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+          </LinearLayout>
+
+        </RelativeLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/work_over_time_layout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/work_time_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+          android:layout_marginLeft="5dp"
+          android:text="Work Overtime Percentage:"
+          android:layout_gravity="center_vertical"
+          android:textColor="@color/colorPrimary"
+          android:textSize="16sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+        <TextView
+          android:id="@+id/overtime_percentage"
+          android:layout_marginLeft="5dp"
+          android:text="70%"
+          android:layout_gravity="center_vertical"
+          android:textColor="@color/colorPrimary"
+          android:textSize="30sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      </LinearLayout>
+
+
+      <LinearLayout
+        android:id="@+id/welfare_layout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/work_over_time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+          android:layout_marginLeft="5dp"
+          android:text="Welfare Satisfaction Score:"
+          android:layout_gravity="center_vertical"
+          android:textColor="@color/colorPrimary"
+          android:textSize="16sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+        <TextView
+          android:id="@+id/welfare_score"
+          android:layout_marginLeft="5dp"
+          android:text="70"
+          android:layout_gravity="center_vertical"
+          android:textColor="@color/colorPrimary"
+          android:textSize="30sp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      </LinearLayout>
+
+    </RelativeLayout>
+  </RelativeLayout>
+
+</RelativeLayout>
